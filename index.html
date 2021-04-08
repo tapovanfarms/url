@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGMC26X9B5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LGMC26X9B5');
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let destURLs = {
+                bpepper: "https://tapovanfarms.wordpress.com/2019/12/14/why-buy-our-pepper/",
+                gpepper: "https://tapovanfarms.wordpress.com/2021/04/07/pickled-green-pepper/",
+                home: "https://tapovanfarms.wordpress.com",
+                honey: "https://tapovanfarms.wordpress.com/2019/07/16/buying-honey/",
+                oil: "https://tapovanfarms.wordpress.com/2019/12/20/why-our-coconut-oil/"
+            };
+            const urlParams = new URLSearchParams(window.location.search);
+            const key = urlParams.get('key');
+            window.location.replace(destURLs[key ? key.toLowerCase() : key] || destURLs['home']);
+        </script>
+    </body>
+</html>
